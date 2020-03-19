@@ -1,10 +1,8 @@
 import React from 'react';
-import Actions from '../../shared/components/Actions';
 import Container from "react-bootstrap/Container";
 
-const Animal = ({ animal, modifyAnimalChoices }) => {
-    const { name, breed, gender, image } = animal;
-
+export const Animal = () => {
+    const { name, breed, gender, image } = {"id":1,"name":"Martin","breed":"Prisoner at Federal Correctional Institution","gender":"Male","image":"2.jpg",}
     return (
         <>
            <Container>
@@ -20,11 +18,18 @@ const Animal = ({ animal, modifyAnimalChoices }) => {
                     <p className="animal-breed">{breed}</p>
                 </div>
             </div>
-
-            <Actions
-                animal={animal}
-                modifyAnimalChoices={modifyAnimalChoices}
-            />
+             <div id="actions">
+               <button
+                 type="button"
+               >
+                 <img src="images/misc/dislike.png" alt="Dislike Animal" />
+               </button>
+               <button
+                 type="button"
+               >
+                 <img src="images/misc/like.png" alt="Like Animal" />
+               </button>
+             </div>
            </Container>
         </>
     );
